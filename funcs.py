@@ -46,6 +46,6 @@ async def get_messages(email: str):
                         'date': escape_markdown_v2(message['date']),
                         'from': escape_markdown_v2(message['from']),
                         'subject': escape_markdown_v2(message['subject']),
-                        'body': escape_markdown_v2(message['textBody'])
+                        'body': escape_markdown_v2(message['body'])
                     })
     return messages
