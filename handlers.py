@@ -1,15 +1,11 @@
 from aiogram import Router, F
-from aiogram.filters import CommandStart, Command
+from aiogram.filters import CommandStart
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
-from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 from aiogram.enums import ParseMode
 from funcs import generate_email, get_messages
 
 router = Router()
-
-class data(StatesGroup):
-    email = State()
 
 home_kb = ReplyKeyboardMarkup(keyboard=[
     [KeyboardButton(text='New mail✉️')]
